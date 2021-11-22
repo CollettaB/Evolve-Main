@@ -6,19 +6,23 @@
     <title>EVOLVE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="layout/styles/framework.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="layout/scripts/node_modules/snazzy-info-window/dist/snazzy-info-window.min.js"></script>
+    <link rel="stylesheet" href="../../dist/snazzy-info-window.min.css">
     <script src="layout/scripts/parallax.js"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=YAIzaSyCnVKRl_z_BHQZmXrbbymc0jgjUFo3SsuM&callback=initMap">
 </head>
 
-<body onload="myFunction()" data-target=".navbar" data-offset="50" style="letter-spacing: 1.6px; margin: 0;">
+<body data-target=".navbar" data-offset="50" style="letter-spacing: 1.6px; margin: 0;">
 
 
-
-
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #000000; border-color: transparent">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #000000; border-color: transparent; margin:0px">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
@@ -29,124 +33,175 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
 
-    <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#hours">HOURS</a></li>
-        <li><a href="#footer">CONTACT</a></li>
-    </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#pricing">PRICING</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#hours">HOURS</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+            </ul>
 
         </div>
     </nav>
 
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/03.png">
-        <div class="text-center" style="padding-top:120px;">
-            <img src="images/logo.png" alt="EVOLVE logo" width="350" height="200">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/03.png" style="height:100%">
+        <div class="text-center hero overlay" style="padding-top:120px;">
+            <img data-aos="fade-up" src="images/logo.png" alt="EVOLVE logo" width="350" height="200">
         </div>
         <div class="text-center" style="padding: 70px; font-family: 'Castoro', serif; font-size: 20px; letter-spacing: 10px; color: white;">
-            <h3>COMING SOON...</h3>
+            <h4>We're Now Open</h4>
         </div>
     </div>
 
 
-        <div id="about" class="container1">
-            <h3 class="text-center header"><br />ABOUT US<br /><br /></h3>
-            <div class="row">
-                <div class="col-md-6 paragraph" style="padding-left:100px">
-                    <p>Located in Kew, Evolvenjdckjnckjsndkjnsdvjnsv Located in Kew, EvolvenjdckjnckjsndkjnsdvjnsvLocated in Kew, Evolvenjdckjnckjsndkjnsdvjnsv</p>
-                    <br> <p>fill in blankssssssssssssssssssss <br /><br /><br /></p>
-                </div>
-                <div class="col-md-6 text-center" style="padding-bottom:60px">
-                    <img src="images/scissors.png" alt="scissors" width=200 height="150">
+    <div id="about" class="container1" style="background-color: #FCF9F7; color: #552d25; padding-bottom: 30px">
+        <h3 class="text-center header" data-aos="fade-up"><br />ABOUT US<br /><br /></h3>
+        <div class="paragraph text-center">
+            <p>Evolve barber and wellness is here in Kew to evolve your look and feel.</p>
+            <br><p>Our friendly staff are happy to take care of you, <br /> so you leave feeling revitalised and evolved <br /><br /><br /></p>
+            <img src="images/pngs/6.png" alt="scissors" height="150">
+        </div>
+    </div>
 
+
+    <div id="team" class="container2" style="padding-bottom: 50px;">
+        <h3 class="text-center" style="color: #552d25" data-aos="fade-up"><br />MEET THE CREW<br /><br /></h3>
+        <div class="row" style="text-align:center">
+            <div class="col-md-3"></div>
+            <div class="col-md-2 paragraph">
+                <div class="flip-card" style="align-content:center">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/pngs/4.png" alt="Avatar" width=200 height=200>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="text-center">MALE CUTS</h3>
+                            <p>We can cut, trim, or cleanup your hair</p>
+                            <p>Um, not on the other head tho...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-        <div id="team" class="container2">
-            <h3 class="text-center"><br />MEET THE CREW<br /><br /></h3>
-            <div class="row">
-                <div class="col-md-4 paragraph text-center">
-                    <img src="images/team.png" alt="" width=200 height=250>
-                    <h3 class="text-center">PERSON</h3>
-                    <br> <p>fill in blankssssssssssssssssssss <br /><br /><br /></p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="images/team.png" alt="EVOLVE logo" width="200" height="250">
-                    <h3 class="text-center">PERSON</h3>
-                    <br> <p>fill in blankssssssssssssssssssss <br /><br /><br /></p>
-
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="images/team.png" alt="" width=200 height=250>
-                    <h3 class="text-center">PERSON</h3>
-                    <br> <p>fill in blankssssssssssssssssssss <br /><br /><br /></p>
+            <div class="col-md-2 paragraph" style="align-items:center">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/pngs/5.png" alt="Avatar" width=200 height=200>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="text-center">MASSAGE</h3>
+                            <p>Get a massage, and leave</p>
+                            <p>feeling like a noodle</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-4 paragraph">
+                <div class="flip-card" style="align-items:center">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/pngs/3.png" alt="Avatar" width=200 height=200>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="text-center">FEMALE CUTS</h3>
+                            <p>Coming Soon...</p>
 
-
-        <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png"></div>
-
-
-        <div id="pricing" class="container1">
-            <div class="row">
-                <div class="col-md-6 paragraph text-center">
-                    <img src="images/team.png" alt="" width=200 height=250>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
+        </div>
+    </div>
+
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png"></div>
+
+    <div id="" class="container2">
+        <h3 class="text-center" data-aos="fade-up" style="color: #552d25"><br />FEELING STRESSED OR TIRED?<br /><br /></h3>
+
+        <div class="row text-center" style="color:#552d25">
+            <img src="images/pngs/2.png" alt="Avatar" width=100 height=100>
+            <p>Maybe you just need a massage... Well don't we all <br /></p>
+            <p>With 8+ years experience in massage therapy, John can help assist with any pain caused from sport, <br />Ssitting at your desk all day, or just from everyday activities.<br /></p>
+            <p> <br /></p>
+        </div>
+    </div>
+
+    <div id="pricing" class="container1" style="background-color: #FCF9F7; color: #552d25">
+        <div class="row">
+            <div class="col-md-6 paragraph text-center">
+                <img src="images/team.png" alt="" style="width:50%">
+            </div>
+
+            <div class="col-md-3 paragraph">
+                <div class="row">
+                    <h3 class="text-center"><br /> <pre data-aos="fade-up" style="font-family: 'Castoro', serif; font-size: 20px; letter-spacing: 10px; background-color: #FCF9F7; color: #552d25; border-color:transparent;">PRICING</pre></h3>
+                    <pre class="text-center" style="font-family: 'Roboto Mono', monospace; border-color: transparent; background-color: #FCF9F7; color: #552d25">
+<b>Haircut                      $35</b>
+Regular cleanup for 2-6 weeks   
+
+<b>Re Style                     $50</b>
+ A new evolution i.e. long hair   
+to a skin fade                  
+
+<b>Buzz Cut                     $35</b>
+One Length haircut or haircut   
+using only clippers ie 2 on     
+top 1 on sides                  
+
+<b>Beard or Stache Trim         $20</b>
+trim and tidy                   
+
+<b>Cut Throat Shave             $45</b>
+full cut throat experience from 
+beard to bald                   
+
+<b>Head Shave                   $50</b>
+full head shave with cut throat 
+
+    </pre>
+                </div>
                 <div class="col-md-3 paragraph">
-                    <div class="row" style="padding-right:30px">
-                        <h3 class="text-center"><br />PRICING<br /><br /></h3>
-                        <pre class="text-center">
-     Haircut             $100
-    Hairstyle           $10
-     Haircut             $100
-    Hairstyle           $10
-    </pre>
-                    </div>
-                    <div class="col-md-3 paragraph">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div id="gallery">
-            <div></div>
-        </div>
-
-        <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png"></div>
-
-        <div id="hours" class="container1">
-            <div class="row">
-                <div class="col-md-6 paragraph">
-                    <h3 class="text-center"><br />OPEN HOURS<br /><br /></h3>
-                    <pre class="text-center">
-    Evolve | 160 High Street, Melbourne VIC
-    (03) 0000
-
-    MONDAY - 9:00AM - 8:00PM
-    TUESDAY - 9:00AM - 8:00PM
-    WEDNESDAY - 9:00AM - 8:00PM
-    THURSDAY - 9:00am - 8:00PM
-    FRIDAY - 9:00AM - 8:00PM
-    SATURDAY - 9:00AM - 8:00PM
-    SUNDAY - 9:00AM - 8:00PM
-    </pre>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/team.png" alt="" width=200 height=200>
                 </div>
             </div>
-        </div>
 
-        <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png">
+        </div>
+    </div>
+
+
+
+
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png"></div>
+
+    <div id="hours" class="container1" style="background-color:#FCF9F7; padding:0px">
+        <div class="row">
+            <div class="col-md-6 paragraph">
+                <h3 class="text-center" data-aos="fade-up" style="color: #552d25"><br />OPEN HOURS<br /><br /></h3>
+                <pre class="text-center" style="font-family: 'Roboto Mono', monospace; background-color: #FCF9F7; color: #552d25; border-color: transparent;">
+<b>Evolve | 160 High Street, Melbourne VIC</b>
+
+MONDAY - 10:00AM - 6:00PM
+TUESDAY - 10:00AM - 6:00PM
+WEDNESDAY - 10:00AM - 6:00PM
+THURSDAY - 10:00AM - 9:00PM
+FRIDAY - 10:00AM - 9:00PM
+SATURDAY - 9:00AM - 5:00PM
+SUNDAY - 10:00AM - 5:00PM
+    </pre>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="map-canvas" style="width:100%; height: 400px"></div>
+            </div>
+        </div>
+    </div>
+    <!--
+        <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png" height="300px">
             <div id="testimonials" class="container-fluid text-center">
-                <h3><b>TESTIMONIALS</b></h3>
+                <h3 data-aos="fade-up"><b>TESTIMONIALS</b></h3>
                 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 
                     <div class="carousel-inner" role="listbox">
@@ -163,39 +218,57 @@
                 </div>
             </div>
         </div>
+    -->
+    <div id="footer" class="container2 text-center">
+        <h3 class="text-center" data-aos="fade-up" style="color: #552d25"><br />CONTACT US<br /><br /></h3>
+        <p>
+            ph: (03) 9510 0563 <br />
+            email: @evolve.com.au <br />
+            <br />
+            Evolve | 160 High Street, Melbourne VIC <br />
+        </p>
+        <ul class="block-social">
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-instagram-1"></i></a></li>
+            <li><a class="scroll" href="#hero"><i class="icon-up-open-1"></i></a></li>
 
-
-
-
-                    <div id="footer" class="container4 text-center">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3>CONTACT US</h3>
-                                <p>
-                                    ph: (03) 9510 0563 <br />
-                                    email: @evolve.com.au <br />
-                                    <br />
-                                    Evolve | 160 High Street, Melbourne VIC <br />
-                                </p>
-
-                            </div>
-                            <div class="col-md-4">
-                                <h3>HAVE A QUESTION?</h3>
-                                <p>Have a question? Email us below or check our FAQs</p>
-
-                            </div>
-                            <div class="col-md-4">
-                                <h3>SEE MORE</h3>
-
-
-
-                            </div>
-                        </div>
+        </ul>
+        <br /><br />
 
     </div>
-         
-    <script>
-    </script>
+    <div class="container1" style="background-color:black; color:white">
+        <!--Row-->
+        <div class="row ">
+            <div class="col-md-12   text-center">
+                <p >
+                    © 2021 Colletta all rights reserved. <br>
+                    Product of <a href="#">Colletta</a>.
+                </p>
+             </div>
+        </div>
+        </div>
+
+        <script>
+            AOS.init();
+
+            $(function () {
+                var map = new google.maps.Map($('.map-canvas')[0], {
+                    zoom: 14,
+                    center: new google.maps.LatLng(-37.807250, 145.030030)
+                });
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(-37.807250, 145.030030)
+                });
+
+                var info = new SnazzyInfoWindow({
+                    marker: marker,
+                    content: 'We are here: 160 High Street Kew'
+                });
+                info.open();
+            });
+
+        </script>
 
 
 </body>
