@@ -36,7 +36,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#pricing">PRICING</a></li>
-                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#services">SERVICES</a></li>
                 <li><a href="#hours">HOURS</a></li>
                 <li><a href="#footer">CONTACT</a></li>
             </ul>
@@ -45,12 +45,15 @@
     </nav>
 
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/03.png" style="height:100%">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/shop/4.jpg" style="height:100%">
         <div class="text-center hero overlay" style="padding-top:120px;">
             <img data-aos="fade-up" src="images/logo.png" alt="EVOLVE logo" width="350" height="200">
+            <!--<p>barber and wellness</p>-->
         </div>
         <div class="text-center" style="padding: 70px; font-family: 'Castoro', serif; font-size: 20px; letter-spacing: 10px; color: white;">
-            <h4>We're Now Open</h4>
+            
+                <h4><b>We're Now Open</b></h4>
+                <h4>Book Now:  0497 062 299</h4>
         </div>
     </div>
 
@@ -65,8 +68,8 @@
     </div>
 
 
-    <div id="team" class="container2" style="padding-bottom: 50px;">
-        <h3 class="text-center" style="color: #552d25" data-aos="fade-up"><br />MEET THE CREW<br /><br /></h3>
+    <div id="services" class="container2" style="padding-bottom: 50px;">
+        <h3 class="text-center" style="color: #552d25" data-aos="fade-up"><br />OUR SERVICES<br /><br /></h3>
         <div class="row" style="text-align:center">
             <div class="col-md-3"></div>
             <div class="col-md-2 paragraph">
@@ -117,7 +120,7 @@
     </div>
 
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/shop/1.jpg"></div>
 
     <div id="" class="container2">
         <h3 class="text-center" data-aos="fade-up" style="color: #552d25"><br />FEELING STRESSED OR TIRED?<br /><br /></h3>
@@ -126,14 +129,14 @@
             <img src="images/pngs/2.png" alt="Avatar" width=100 height=100>
             <p>Maybe you just need a massage... Well don't we all <br /></p>
             <p>With 8+ years experience in massage therapy, John can help assist with any pain caused from sport, <br />Ssitting at your desk all day, or just from everyday activities.<br /></p>
-            <p> <br /></p>
+            <p> <br /><br /></p>
         </div>
     </div>
 
     <div id="pricing" class="container1" style="background-color: #FCF9F7; color: #552d25">
         <div class="row">
-            <div class="col-md-6 paragraph text-center">
-                <img src="images/team.png" alt="" style="width:50%">
+            <div class="col-md-6 paragraph text-center" style="padding-top:50px">
+                <img src="images/pngs/8.png" alt="" style="width:50%">
             </div>
 
             <div class="col-md-3 paragraph">
@@ -170,12 +173,18 @@ full head shave with cut throat
 
         </div>
     </div>
+    <div id="about" class="container1" style="background-color: white; color: #552d25; padding-bottom: 30px">
+        <h3 class="text-center header" data-aos="fade-up"><br />OUR TEAM<br /><br /></h3>
+        <div class="paragraph text-center">
+            <img src="images/pngs/7.png" alt="" height="150">
+            <p></p>
+        </div>
+    </div>
 
 
 
 
-
-    <div class="parallax-window" data-parallax="scroll" data-image-src="images/backgrounds/01.png"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/shop/6.jpg"></div>
 
     <div id="hours" class="container1" style="background-color:#FCF9F7; padding:0px">
         <div class="row">
@@ -194,7 +203,7 @@ SUNDAY - 10:00AM - 5:00PM
     </pre>
             </div>
             <div class="col-md-6 text-center">
-                <div class="map-canvas" style="width:100%; height: 400px"></div>
+                <img src="../images/map.png" style="width:100%; height: 400px">
             </div>
         </div>
     </div>
@@ -222,8 +231,8 @@ SUNDAY - 10:00AM - 5:00PM
     <div id="footer" class="container2 text-center">
         <h3 class="text-center" data-aos="fade-up" style="color: #552d25"><br />CONTACT US<br /><br /></h3>
         <p>
-            ph: (03) 9510 0563 <br />
-            email: @evolve.com.au <br />
+            PH: 0497 062 299 <br />
+            EMAIL: contact@evolvebarber.com.au <br />
             <br />
             Evolve | 160 High Street, Melbourne VIC <br />
         </p>
@@ -240,35 +249,35 @@ SUNDAY - 10:00AM - 5:00PM
         <!--Row-->
         <div class="row ">
             <div class="col-md-12   text-center">
-                <p >
+                <p>
                     © 2021 Colletta all rights reserved. <br>
                     Product of <a href="#">Colletta</a>.
                 </p>
-             </div>
+            </div>
         </div>
-        </div>
+    </div>
 
-        <script>
-            AOS.init();
+    <script>
+        AOS.init();
 
-            $(function () {
-                var map = new google.maps.Map($('.map-canvas')[0], {
-                    zoom: 14,
-                    center: new google.maps.LatLng(-37.807250, 145.030030)
-                });
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(-37.807250, 145.030030)
-                });
-
-                var info = new SnazzyInfoWindow({
-                    marker: marker,
-                    content: 'We are here: 160 High Street Kew'
-                });
-                info.open();
+        $(function () {
+            var map = new google.maps.Map($('.map-canvas')[0], {
+                zoom: 14,
+                center: new google.maps.LatLng(-37.807250, 145.030030)
+            });
+            var marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(-37.807250, 145.030030)
             });
 
-        </script>
+            var info = new SnazzyInfoWindow({
+                marker: marker,
+                content: 'We are here: 160 High Street Kew'
+            });
+            info.open();
+        });
+
+    </script>
 
 
 </body>
