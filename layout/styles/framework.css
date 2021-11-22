@@ -4,72 +4,190 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&family=Roboto+Slab&display=swap');
 
 
-/*LOADING -----------------------------------------------------------*/
-#text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 20px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    font-family: 'Roboto Mono', monospace;
-    letter-spacing: 5px;
+/*Site wrapper*/
+
+.wrapper {
+    position: relative;
+    background: #ffffff;
 }
-#overlay {
-    position: fixed;
+/*End site wrapper*/
+
+/* Hero Section*/
+
+section.hero {
+    background: #151514;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-img img {
     display: none;
+}
+
+.background-img {
     width: 100%;
     height: 100%;
-    top: 0;
+}
+
+.background-img {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #151514;
+    background-image: none;
+    background-position: 50% 50% !important;
+    background-repeat: repeat;
+    background-size: cover !important;
+    height: 100%;
     left: 0;
-    right: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+section.hero .inner-hero {
     bottom: 0;
-    background-color: rgba(0,0,0,0.9);
-    z-index: 2;
-    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: 10;
 }
 
-.animate-bottom {
-    position: relative;
-    animation-name: animatebottom;
-    animation-duration: 1s;
+.header {
+    text-align:center;
 }
 
-@keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0
-    }
+.main-slider .slides li {
+    background-size: cover;
+    min-height: 600px;
+}
 
-    to {
-        bottom: 0;
-        opacity: 1
-    }
+.main-slider .flex-control-nav {
+    display: none;
+}
+
+.header.default {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 
-    /*BODY---------------------------------------------------------------*/
 
-    body {
-        color: #777;
+
+.mobile-but {
+    display: inline-block;
+    height: 24px;
+    position: absolute;
+    right: 30px;
+    top: -22px;
+    z-index: 1000;
+    display: none;
+}
+
+    .mobile-but .lines {
+        transform: translate(0px, 10px) rotate(0deg);
+        -webkit-transform: translate(0px, 10px) rotate(0deg);
+        -ms-transform: translate(0px, 10px) rotate(0deg);
+        -moz-transform: translate(0px, 10px) rotate(0deg);
     }
 
-    ul {
-        list-style: none;
-        font-family: 'Roboto Mono', monospace;
+        .mobile-but .lines,
+        .mobile-but .lines:after,
+        .mobile-but .lines:before {
+            height: 2px;
+            width: 25px;
+        }
+
+            .mobile-but .lines:after,
+            .mobile-but .lines:before {
+                content: " ";
+                display: block;
+            }
+
+            .mobile-but .lines:after {
+                transform: translate(0px, 4px) rotate(0deg);
+                -webkit-transform: translate(0px, 4px) rotate(0deg);
+                -ms-transform: translate(0px, 4px) rotate(0deg);
+                -moz-transform: translate(0px, 4px) rotate(0deg);
+            }
+
+            .mobile-but .lines:before {
+                transform: translate(0px, -4px) rotate(0deg);
+                -webkit-transform: translate(0px, -4px) rotate(0deg);
+                -ms-transform: translate(0px, -4px) rotate(0deg);
+                -moz-transform: translate(0px, -4px) rotate(0deg);
+            }
+
+            .mobile-but .lines:after,
+            .mobile-but .lines:before {
+                background: #151514;
+            }
+
+.toggle-mobile-but.active .mobile-but .lines:after {
+    transform: translate(0px, -1px) rotate(45deg);
+    -webkit-transform: translate(0px, -1px) rotate(45deg);
+    -ms-transform: translate(0px, -1px) rotate(45deg);
+    -moz-transform: translate(0px, -1px) rotate(45deg);
+}
+
+.toggle-mobile-but.active .mobile-but .lines:before {
+    transform: translate(0px, 1px) rotate(-45deg);
+    -webkit-transform: translate(0px, 1px) rotate(-45deg);
+    -ms-transform: translate(0px, 1px) rotate(-45deg);
+    -moz-transform: translate(0px, 1px) rotate(-45deg);
+}
+
+.main-nav li {
+    display: block;
+    float: left;
+    margin-left: 1.9625em;
+    font-size: .71875em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+    .main-nav li a {
+        color: #ffffff;
+        display: block;
+        padding: .75em 0;
+        position: relative;
     }
 
-    p {
-        font-family: 'Roboto Mono', monospace;
-    }
-    /*CONTAINER 1 -----------------------------------------------------*/
-    .container1 {
-        color: #fff;
-        background-color: #1B1B1B;
-        width: auto;
-        padding: 30px;
-    }
+.header.switched-header .main-nav li a {
+    color: #151514;
+}
+
+h1.large {
+    font-size: 3.4375em;
+    text-transform: none;
+    line-height: 1.5em;
+}
+/* End hero Section*/
+
+/*BODY---------------------------------------------------------------*/
+
+body {
+    color: #777;
+}
+
+ul {
+    list-style: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+pre{
+    border-color:transparent;
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
+}
+/*CONTAINER 1 -----------------------------------------------------*/
 
     .container1 h3 {
         font-family: 'Castoro', serif;
@@ -78,129 +196,181 @@
     }
 
     .container1 pre {
-        background-color: #1B1B1B;
-        border: #1B1B1B;
-        color: #FFF
+        color: #552d25;
+        background-color: #c98a6a;
     }
-    /*CONTAINER 2 ------------------------------------------------------*/
-    .container2 {
-        color: #1B1B1B;
-        background-color: #FFF;
-        width: auto;
-        padding: 30px;
-    }
+
+/*CONTAINER 2 ------------------------------------------------------*/
+.container2 {
+    color: #552d25;
+    background-color: #FFF;
+    width: auto;
+}
 
     .container2 h3 {
         font-family: 'Castoro', serif;
         font-size: 20px;
         letter-spacing: 10px;
     }
-    /*CONTAINER 3 ------------------------------------------------------*/
-    /*CONTAINER 4 ------------------------------------------------------*/
-    .container4 {
-        color: #FFF;
-        background-color: #000;
-        width: auto;
-        padding: 30px;
-    }
+/*CONTAINER 3 ------------------------------------------------------*/
+/*CONTAINER 4 ------------------------------------------------------*/
+.container4 {
+    color: #c98a6a;
+    background-color: #552d25;
+    width: auto;
+}
 
     .container4 h3 {
         font-family: 'Castoro', serif;
         font-size: 20px;
         letter-spacing: 10px;
     }
-    /*CAROUSEL-----------------------------------------------------------*/
-    .carousel-control.right, .carousel-control.left {
-        background-image: none;
-        color: #f4511e;
-    }
+/*CAROUSEL-----------------------------------------------------------*/
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
 
-    .carousel-indicators li {
-        border-color: #f4511e;
-    }
+.carousel-indicators li {
+    border-color: #f4511e;
+}
 
     .carousel-indicators li.active {
         background-color: #f4511e;
     }
 
-    #testimonials h3 {
-        font-family: 'Castoro', serif;
-        font-size: 20px;
-        letter-spacing: 10px;
-        padding: 20px;
-    }
-    /*GOOGLE MAPS -------------------------------------------------------*/
-    #googleMap {
-        width: 100%;
-        height: 400px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    /*PARALLAX ---------------------------------------------------------*/
-    .parallax-window {
-        min-height: 300px;
-        background: transparent;
-        width: 100%;
-    }
+#testimonials h3 {
+    font-family: 'Castoro', serif;
+    font-size: 20px;
+    letter-spacing: 10px;
+    padding: 20px;
+}
+/*GOOGLE MAPS -------------------------------------------------------*/
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+/*PARALLAX ---------------------------------------------------------*/
+.parallax-window {
+    width: 100%;
+    background-size: cover;
+    min-height: 600px;
+}
 
-    .parallax {
-        /* The image used */
-        background-image: url("images/backgrounds/01.png");
-        /* Full height */
-        height: 100%;
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+.parallax {
+    /* The image used */
+    background-image: url("images/backgrounds/01.png");
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
-    .container-fluid {
-        padding: 60px;
-        color: #FFF;
-    }
+.container-fluid {
+    padding: 60px;
+    color: #FFF;
+}
 
-    .parallax-window .container-fluid {
-        height: 200px;
-    }
-    /*NAV BAR ----------------------------------------------------------*/
-    .nav-tabs li a {
-        color: #777;
-    }
+.parallax-window .container-fluid {
+    height: 100%;
+    background-size: cover;
+    min-height: 600px;
+}
+/*NAV BAR ----------------------------------------------------------*/
+.nav-tabs li a {
+    color: #777;
+}
 
-    .navbar {
-        font-family: 'Roboto Mono', monospace;
-        margin-bottom: 0;
-        padding-right: 20px;
-        padding-left: 20px;
-        background-color: #383733;
-        border: 0;
-        font-size: 11px !important;
-        letter-spacing: 6px;
-        opacity: 0.8;
-    }
+.navbar {
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #383733;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 6px;
+    opacity: 0.8;
+}
 
     .navbar li a, .navbar .navbar-brand {
         color: #d5d5d5 !important;
     }
 
-    .navbar-nav li a:hover {
-        color: #fff !important;
-    }
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
 
-    .navbar-nav li.active a {
-        color: #fff !important;
-        background-color: #383733 !important;
-    }
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #383733 !important;
+}
 
-    .navbar-default .navbar-toggle {
-        border-color: transparent;
-    }
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
 
-    .navbar-header {
-        background-color: transparent;
-    }
-    /*CONTAINER*/
-    /*JUMBOTRON*/
-    /*MEDIA*/
+.navbar-header {
+    background-color: transparent;
+}
+/*CONTAINER*/
+/*JUMBOTRON*/
+/*MEDIA*/
+
+
+
+
+/*CARD FLIP*/
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    border: 1px solid transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #fff;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #552d25;
+    color: white;
+    transform: rotateY(180deg);
+}
